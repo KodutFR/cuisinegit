@@ -59,13 +59,14 @@ public class Cuisine {
 				Ohuile, Ovinrouge, Ovinlanc, Olait, Obalsamique};
 		
 		gele[] geleTab = {Ovanille};
+		
+		Legume[] legumeTab = {Opoivron, Ocarotte, Otomate, Opomme, Opeche};
 
 		double stockTempere=0;
 		double stockFroid=0;
 		double stockGele=0;
 		
 		char reponse1 = ' ';
-
 		
 		if (argent > Opoivron.prix * 50)
 		argent -= Opoivron.acheter(50);
@@ -107,12 +108,81 @@ public class Cuisine {
 
 		if (reponse1 == '2')
 		{
+			char reponseachat1 = ' ';
 			System.out.println("Que voulez-vous acheter ?");
-			System.out.println("1 - ");
-			System.out.println("Que voulez-vous acheter ?");
-			System.out.println("Que voulez-vous acheter ?");
-			System.out.println("Que voulez-vous acheter ?");
-			System.out.println("Que voulez-vous acheter ?");
+			System.out.println("1 - Fruits et légumes");
+			System.out.println("2 - Viandes et poissons");
+			System.out.println("3 - Féculents");
+			System.out.println("4 - Assaisonnement et épices");
+			System.out.println("5 - Liquides");
+			System.out.println("6 - Autres ingrédients");
+			System.out.println("7 - Rangements");
+			reponseachat1 = sc.nextLine().charAt(0);
+			
+			char reponseachat2 = ' ';
+			String reponseQte = " ";
+			int reponseQteInt;
+			
+			
+			if (reponseachat1 == '1'){
+				System.out.println("1 - Poivron ");
+				System.out.println("2 - Carotte");
+				System.out.println("3 - Tomate");
+				System.out.println("4 - Pomme");
+				System.out.println("5 - Pêche");
+				reponseachat2 = sc.nextLine().charAt(0);
+				System.out.println("Combien d'unités ?");
+				reponseQte = sc.nextLine();
+				reponseQteInt = Integer.valueOf(reponseQte);
+				System.out.println(reponseQteInt);
+				if (argent > legumeTab[reponseachat2].prix * reponseQteInt)
+					argent -= legumeTab[reponseachat2].acheter(reponseQteInt);
+					else 
+						System.out.println("argent insuffisant");
+				System.out.println(Opoivron);
+				System.out.println(argent);
+			}
+			
+			if (reponseachat1 == '2'){
+				System.out.println("1 - Poulet ");
+				System.out.println("2 - Boeuf");
+				System.out.println("3 - Poisson");
+			}
+			
+			if (reponseachat1 == '3'){
+				System.out.println("1 - Riz ");
+				System.out.println("2 - Pâtes");
+				System.out.println("3 - Pomme de terre");
+			}
+			
+			if (reponseachat1 == '4'){
+				System.out.println("1 - Sel ");
+				System.out.println("2 - Poivre");
+				System.out.println("3 - Canelle");
+			}
+			
+			if (reponseachat1 == '5'){
+				System.out.println("1 - Vin rouge ");
+				System.out.println("2 - Vin blanc");
+				System.out.println("3 - Vinaigre balsamique");
+				System.out.println("4 - Huile");
+				System.out.println("5 - Lait");
+			}
+			
+			if (reponseachat1 == '6'){
+				System.out.println("1 - Glace vanille ");
+				System.out.println("2 - Sucre");
+				System.out.println("3 - Farine");
+				System.out.println("4 - Huile");
+				System.out.println("5 - Lait");
+				System.out.println("6 - Mozzarella");
+			}
+			
+			if (reponseachat1 == '7'){
+				System.out.println("1 - Placard ");
+				System.out.println("2 - Frigo");
+				System.out.println("3 - Congélateur");
+			}
 		}
 		
 		//boeuf carottes : 1 boeuf 2 carottes, 40g de riz, 1g sel, 1g poivre
