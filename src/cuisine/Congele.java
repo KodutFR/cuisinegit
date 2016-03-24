@@ -2,11 +2,13 @@ package cuisine;
 
 public class Congele extends gele {
 	
+	int coef = 1;
 
 	public Congele() {
 		nomobj = "inconnu";
 		unite = "unités";
 		qte = 0;
+		coef = 1;
 		prix = 0;
 		this.setPlace();
 	}
@@ -16,6 +18,7 @@ public class Congele extends gele {
 		qte = qtee;
 		unite = unit;
 		prix = pri;
+		coef = 1;
 		this.setPlace();
 	}
 

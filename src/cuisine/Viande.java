@@ -9,6 +9,7 @@ public class Viande extends Froid {
 		qte = 0;
 		unite = "unités";
 		prix = 0;
+		coef = 100;
 		this.setPlace();
 	}
 	
@@ -17,6 +18,7 @@ public class Viande extends Froid {
 		qte = qtee;
 		unite = unit;
 		prix = pri;
+		coef = 100;
 		this.setPlace();
 	}
 

@@ -5,6 +5,7 @@ abstract class Ingred extends Objet {
 	double place;
 	String unite;
 	int temperatureIngred;
+	int coef;
 	
 
 	

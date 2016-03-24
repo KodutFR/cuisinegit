@@ -2,12 +2,14 @@ package cuisine;
 
 public class Epice extends Tempere {
 	
+
 	
 	public Epice() {
 		nomobj = "inconnu";
 		qte = 0;
 		prix = 0;
 		unite = "unités";
+		coef = 1;
 		this.setPlace();
 	}
 	
@@ -16,6 +18,7 @@ public class Epice extends Tempere {
 		qte = qtee;
 		unite = unit;
 		prix = pri;
+		coef = 1;
 		this.setPlace();
 	}
 

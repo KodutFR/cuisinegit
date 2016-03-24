@@ -8,6 +8,7 @@ public class Legume extends Froid {
 		unite = "unités";
 		qte = 0;
 		prix = 0;
+		coef = 10;
 		this.setPlace();
 	}
 	
@@ -16,6 +17,7 @@ public class Legume extends Froid {
 		qte = qtee;
 		unite = unit;
 		prix = pri;
+		coef = 10;
 		this.setPlace();
 	}
 	
